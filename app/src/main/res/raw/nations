@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root name="身份">
+    <role name="学生">
+    </role>
+    <role name="教师">
+    </role>
+    <role name="管理员">
+    </role>
+</root>

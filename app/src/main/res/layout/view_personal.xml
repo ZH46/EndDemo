@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/snow"
+              android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="30dp"
+                  android:background="@color/khaki" android:gravity="center">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="个人中心" android:textSize="20sp" android:gravity="center"
+                  android:textColor="@color/white"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="80dp"
+                  android:orientation="horizontal" android:background="@color/papayawhip"
+                  android:layout_marginTop="10dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="姓名" android:id="@+id/stu_name" android:textStyle="bold"
+                  android:textSize="25sp" android:layout_marginLeft="20dp" android:layout_gravity="center"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="学生" android:id="@+id/stu_role" android:layout_gravity="center"
+                  android:layout_marginLeft="250dp" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="10dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="年级" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="5dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="班级" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="5dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="专业" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="5dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="学号" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="5dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="出生日期" android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/papayawhip" android:layout_marginTop="5dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="联系电话" android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>
