@@ -9,7 +9,7 @@ import com.example.administrator.courcemanager.R;
 import com.example.administrator.courcemanager.fragment.CourceFragment;
 import com.example.administrator.courcemanager.fragment.InfoFragment;
 import com.example.administrator.courcemanager.fragment.MyFragmentPagerAdapter;
-import com.example.administrator.courcemanager.fragment.PersonalFragment;
+import com.example.administrator.courcemanager.fragment.SPersonalFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +32,11 @@ public class StudentActivity extends FragmentActivity {
 
         CourceFragment courceFragment=new CourceFragment();
         InfoFragment infoFragment=new InfoFragment();
-        PersonalFragment personalFragment1=new PersonalFragment();
+        SPersonalFragment spersonalFragment=new SPersonalFragment();
 
         fragmentList.add(courceFragment);
         fragmentList.add(infoFragment);
-        fragmentList.add(personalFragment1);
+        fragmentList.add(spersonalFragment);
 
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
 

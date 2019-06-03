@@ -1,5 +1,6 @@
 package com.example.administrator.courcemanager.fragment;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,8 +18,8 @@ import java.util.List;
 
 public class CourceFragment extends Fragment {
 
-    LinearLayout weekPanels[] = new LinearLayout[7];
-    List courseData[] = new ArrayList[7];
+    LinearLayout[] weekPanels = new LinearLayout[7];
+    List[] courseData = new ArrayList[7];
     int itemHeight;
     int marTop, marLeft;
 
@@ -93,7 +94,7 @@ public class CourceFragment extends Fragment {
                 lp.setMargins(marLeft, (c.getStart() - 1) * (itemHeight + marTop) + marTop, 0, 0);
             }
             tv.setLayoutParams(lp);
-            tv.setGravity(Gravity.TOP);
+            tv.setGravity(Gravity.CENTER);
             tv.setGravity(Gravity.CENTER_HORIZONTAL);
             tv.setTextSize(12);
             tv.setTextColor(getResources().getColor(R.color.lightcoral));

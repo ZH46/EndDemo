@@ -6,10 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.RadioGroup;
 import com.example.administrator.courcemanager.R;
-import com.example.administrator.courcemanager.fragment.CourceFragment;
-import com.example.administrator.courcemanager.fragment.InfoFragment;
-import com.example.administrator.courcemanager.fragment.MyFragmentPagerAdapter;
-import com.example.administrator.courcemanager.fragment.PersonalFragment;
+import com.example.administrator.courcemanager.fragment.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +26,10 @@ public class TeacherActivity extends FragmentActivity {
 
         CourceFragment courceFragment=new CourceFragment();
         InfoFragment infoFragment=new InfoFragment();
-        PersonalFragment personalFragment1=new PersonalFragment();
-
+        TPersonalFragment tpersonalFragment=new TPersonalFragment();
         fragmentList.add(courceFragment);
         fragmentList.add(infoFragment);
-        fragmentList.add(personalFragment1);
+        fragmentList.add(tpersonalFragment);
 
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
 

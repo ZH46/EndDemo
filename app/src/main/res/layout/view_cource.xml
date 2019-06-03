@@ -36,56 +36,56 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
                 android:layout_marginLeft="2dp"
-                android:text="" />
+                android:text=""/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周一" />
+                android:text="周一"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周二" />
+                android:text="周二"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周三" />
+                android:text="周三"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周四" />
+                android:text="周四"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周五" />
+                android:text="周五"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周六" />
+                android:text="周六"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
                 android:background="@color/papayawhip"
-                android:text="周日" />
+                android:text="周日"/>
 
     </LinearLayout>
 
@@ -114,7 +114,7 @@
                         android:background="@color/papayawhip"
                         android:layout_marginTop="2dp"
                         android:layout_marginLeft="2dp"
-                        android:text="1" />
+                        android:text="1"/>
                 <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="60dp"

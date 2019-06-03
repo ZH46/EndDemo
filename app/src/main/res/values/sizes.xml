@@ -3,4 +3,6 @@
     <dimen name="weekItemHeight">60dp</dimen>
     <dimen name="weekItemMarTop">2dp</dimen>
     <dimen name="weekItemMarLeft">2dp</dimen>
+    <dimen name="textItemHeight">40dp</dimen>
+    <dimen name="textItemMarTop">5dp</dimen>
 </resources>
