@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/whitesmoke">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tattend"
+                    android:layout_marginTop="10dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_one" android:id="@+id/img1"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="出勤管理" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/img1" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tevalua"
+                    android:layout_marginTop="1dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_two" android:id="@+id/img2"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="课程评价管理" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/img2" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tgold"
+                    android:layout_marginTop="1dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_three" android:id="@+id/img3"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="作业成绩管理" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/img3" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

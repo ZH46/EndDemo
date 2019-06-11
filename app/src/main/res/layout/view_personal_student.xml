@@ -2,36 +2,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/lightgrey"
+              android:background="@color/whitesmoke"
               android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent" android:layout_height="120dp"
-                  android:orientation="vertical" android:background="@color/white">
-        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
-                  android:id="@+id/stu_name" android:textStyle="bold" android:textColor="@color/coral"
-                  android:layout_marginTop="20dp" android:background="@null"
-                  android:textSize="25sp" android:layout_marginLeft="40dp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                  android:id="@+id/stu_role" android:textColor="@color/gray"
-                  android:layout_marginTop="5dp"
-                  android:layout_marginLeft="40dp" android:textSize="15sp"/>
+                  android:orientation="horizontal" android:background="@color/white">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/stu_name" android:textStyle="bold" android:textColor="@color/black"
+                      android:layout_marginTop="27dp" android:textSize="28sp" android:layout_marginLeft="40dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/stu_role" android:textColor="@color/gray"
+                      android:layout_marginTop="5dp" android:layout_marginLeft="40dp" android:textSize="17sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:gravity="center|right">
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/s_editbt"
+                    android:background="@color/white" android:textColor="@color/coral" android:textSize="15sp"
+                    android:text="编辑个人资料" android:layout_margin="5dp"/>
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp" android:background="@color/white"
-                  android:orientation="vertical">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_grade" android:textColor="@color/black" android:layout_margin="5dp"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_professional" android:textColor="@color/black" android:layout_margin="5dp"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_class" android:textColor="@color/black" android:layout_margin="5dp"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_id" android:textColor="@color/black" android:layout_margin="5dp"/>
-        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_bir" android:textColor="@color/coral" android:background="@null"
-                  android:layout_margin="5dp"/>
-        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/stu_phone" android:textColor="@color/coral" android:background="@null"
-                  android:layout_margin="5dp"/>
+                  android:layout_marginTop="10dp" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:background="@color/white" android:orientation="horizontal">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:text="年级"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/stu_grade" android:textColor="@color/black"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:layout_marginTop="1dp"
+                      android:background="@color/white">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:text="专业"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/stu_professional" android:textColor="@color/black"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:layout_marginTop="1dp"
+                      android:background="@color/white">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:text="班级"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/stu_class" android:textColor="@color/black"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:layout_marginTop="1dp"
+                      android:background="@color/white">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:text="学号"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/stu_id" android:textColor="@color/black"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:layout_marginTop="1dp"
+                      android:background="@color/white">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:text="联系电话"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/stu_phone" android:textColor="@color/black"
+                      android:textSize="20sp" android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:orientation="horizontal">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/s_backbt"
+                android:background="@color/coral" android:textColor="@color/white" android:textSize="20sp"
+                android:text="退出登录" android:layout_margin="5dp"/>
     </LinearLayout>
 
 </LinearLayout>

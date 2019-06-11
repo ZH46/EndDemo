@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/snow"
+        android:background="@color/whitesmoke"
         tools:context=".activity.MainActivity">
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="掌上课堂" android:textSize="40dp" android:textColor="@color/gray"
@@ -19,7 +19,7 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="230dp"
-            android:background="@color/snow"
+            android:background="@color/whitesmoke"
             tools:ignore="MissingConstraints"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="8dp"
@@ -95,24 +95,27 @@
                          android:layout_marginTop="10dp"/>
         </RadioGroup>
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="horizontal">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
             <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
                     android:text="记住密码"
                     android:id="@+id/remember"/>
             <Button
                     android:id="@+id/BtLogin"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="登录"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="10dp"/>
+                    android:background="@color/coral"
+                    android:textColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="登录"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

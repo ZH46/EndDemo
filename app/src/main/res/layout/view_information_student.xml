@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/whitesmoke"
+              android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/sattend"
+                    android:layout_marginTop="10dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_one" android:id="@+id/im1"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="出勤查询" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/im1" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/sevalua"
+                    android:layout_marginTop="1dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_two" android:id="@+id/im2"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="课程评价查询" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/im2" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/sgold"
+                    android:layout_marginTop="1dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_three" android:id="@+id/im3"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="作业成绩查询" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/im3" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/usualgold"
+                    android:layout_marginTop="1dp" android:background="@color/white" android:clickable="true">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp"  android:layout_marginLeft="5dp"
+                   android:background="@mipmap/ic_launcher_four" android:id="@+id/im4"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="平时成绩计算" android:layout_centerVertical="true" android:textSize="20sp"
+                  android:layout_toRightOf="@id/im4" android:layout_marginLeft="10dp"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp"
+                   android:background="@mipmap/ic_launcher_right" android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

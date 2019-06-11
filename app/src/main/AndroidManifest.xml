@@ -5,7 +5,7 @@
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
+            android:label="掌上课堂"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
@@ -23,19 +23,56 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.StudentActivity">
+        <activity android:name=".student.StudentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TeacherActivity">
+        <activity android:name=".teacher.TeacherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".student.StudentEditActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".teacher.TeacherEditActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".manager.ManagerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".manager.TeacherManageActivity">
+        </activity>
+        <activity android:name=".manager.StudentManageActivity">
+        </activity>
+        <activity android:name=".student.StudentAttendActivity">
+        </activity>
+        <activity android:name=".teacher.TeacherAttendActivity">
+        </activity>
+        <activity android:name=".student.StudentScoreActivity">
+        </activity>
+        <activity android:name=".teacher.TeacherScoreActivity">
+        </activity>
+        <activity android:name=".student.StudentSevaluaActivity">
+        </activity>
+        <activity android:name=".teacher.TeacherSevaluaActivity">
         </activity>
     </application>
 

@@ -8,9 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import com.example.administrator.courcemanager.R;
+import com.example.administrator.courcemanager.manager.ManagerActivity;
+import com.example.administrator.courcemanager.student.StudentActivity;
+import com.example.administrator.courcemanager.teacher.TeacherActivity;
 import com.example.administrator.courcemanager.vo.RoleInfo;
 import com.example.administrator.courcemanager.utils.Utils;
 import com.example.administrator.courcemanager.sql.MyPassWord;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 登录界面类
@@ -21,6 +27,7 @@ public class MainActivity extends Activity {
     String passWord = "";//密码
     String roleStyle = "";//角色
     private int isRemenber = 0;//记住密码
+    private static boolean mBackKeyPressed = false;//记录是否有首次按键
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,7 @@ public class MainActivity extends Activity {
          */
         SharedPreferences sharep = getSharedPreferences("data", Context.MODE_PRIVATE);
         int a = sharep.getInt("check", 0);
+
         if (a == 1) {
             if (sharep != null) {
                 String number = sharep.getString("userName", "");
@@ -62,6 +70,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 userName = et1.getText().toString();
                 passWord = et2.getText().toString();
+                Utils.saveUserInfo(getApplicationContext(),userName,passWord);
                 if (userName.equals("")) {
                     Toast.makeText(getApplicationContext(), "账号不能为空", Toast.LENGTH_SHORT).show();
                     return;
@@ -78,11 +87,15 @@ public class MainActivity extends Activity {
                         if(roleStyle.equals("学生")){
                             Intent intent = new Intent(MainActivity.this, StudentActivity.class);
                             startActivity(intent);
+                            finish();
                         }else if(roleStyle.equals("教师")){
                             Intent intent = new Intent(MainActivity.this, TeacherActivity.class);
                             startActivity(intent);
-                        }else{
-
+                            finish();
+                        }else if(roleStyle.equals("管理员")){
+                            Intent intent = new Intent(MainActivity.this, ManagerActivity.class);
+                            startActivity(intent);
+                            finish();
                         }
                     }
                 }
@@ -95,10 +108,10 @@ public class MainActivity extends Activity {
                     isRemenber = 1;
                     userName = et1.getText().toString();
                     passWord = et2.getText().toString();
-                    Utils.saveUserInfo(getApplicationContext(), userName, passWord, isRemenber);
+                    Utils.saveUserPassword(getApplicationContext(), userName, passWord, isRemenber);
                 } else {
                     isRemenber = 0;
-                    Utils.saveUserInfo(getApplicationContext(), "", "", isRemenber);
+                    Utils.saveUserPassword(getApplicationContext(), "", "", isRemenber);
                 }
             }
         });
@@ -110,6 +123,26 @@ public class MainActivity extends Activity {
                 roleStyle=rb.getText().toString();
             }
         });
+    }
+
+    /**
+     * 双击退出程序
+     */
+    @Override
+    public void onBackPressed() {
+        if(!mBackKeyPressed){
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            mBackKeyPressed = true;
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    mBackKeyPressed=false;
+                }
+            },2000);
+        }else{
+            this.finish();
+            System.exit(0);
+        }
     }
 
     public boolean judge(RoleInfo roleInfo){

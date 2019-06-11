@@ -53,29 +53,29 @@ public class CourceFragment extends Fragment {
 
     public void getData() {
         List<Course> list1 = new ArrayList<Course>();
-        Course c1 = new Course("软件工程", "A402", 1, 4, "典韦", "1002", 2, 14);
+        Course c1 = new Course("软件工程", "A402", 1, 4, "典韦", 2, 14);
         list1.add(c1);
-        list1.add(new Course("C语言", "A101", 6, 3, "甘宁", "1001", 2, 14));
+        list1.add(new Course("C语言", "A101", 6, 3, "甘宁", 2, 14));
         courseData[0] = list1;
 
         List<Course> list2 = new ArrayList<Course>();
-        list2.add(new Course("计算机组成原理", "A106", 6, 3, "马超", "1001", 2, 14));
+        list2.add(new Course("计算机组成原理", "A106", 6, 3, "马超", 2, 14));
         courseData[1] = list2;
 
         List<Course> list3 = new ArrayList<Course>();
-        list3.add(new Course("数据库原理", "A105", 2, 3, "孙权", "1008", 2, 14));
-        list3.add(new Course("计算机网络", "A405", 6, 2, "司马懿", "1009", 2, 14));
-        list3.add(new Course("电影赏析", "A112", 9, 2, "诸葛亮", "1039", 2, 14));
+        list3.add(new Course("数据库原理", "A105", 2, 3, "孙权", 2, 14));
+        list3.add(new Course("计算机网络", "A405", 6, 2, "司马懿", 2, 14));
+        list3.add(new Course("电影赏析", "A112", 9, 2, "诸葛亮", 2, 14));
         courseData[2] = list3;
 
         List<Course> list4 = new ArrayList<Course>();
-        list4.add(new Course("数据结构", "A223", 1, 3, "刘备", "1012", 2, 14));
-        list4.add(new Course("操作系统", "A405", 6, 3, "曹操", "1014", 2, 14));
+        list4.add(new Course("数据结构", "A223", 1, 3, "刘备", 2, 14));
+        list4.add(new Course("操作系统", "A405", 6, 3, "曹操", 2, 14));
         courseData[3] = list4;
 
         List<Course> list5 = new ArrayList<Course>();
-        list5.add(new Course("Android开发", "C120", 1, 4, "黄盖", "1250", 2, 14));
-        list5.add(new Course("游戏设计原理", "C120", 8, 2, "陆逊", "1251", 2, 14));
+        list5.add(new Course("Android开发", "C120", 1, 4, "黄盖", 2, 14));
+        list5.add(new Course("游戏设计原理", "C120", 8, 2, "陆逊", 2, 14));
         courseData[4] = list5;
     }
 

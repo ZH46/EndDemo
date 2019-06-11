@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:background="@color/whitesmoke"
+        android:layout_height="match_parent"
+        tools:context=".manager.ManagerActivity"
+        android:orientation="vertical">
+
+    <Button android:layout_width="100dp" android:layout_height="100dp" android:textSize="15sp"
+            android:background="@drawable/circlebt" android:text="学生管理" android:textColor="@color/white"
+            android:layout_marginTop="40dp" android:layout_gravity="center" android:id="@+id/s_manage"/>
+    <Button android:layout_width="100dp" android:layout_height="100dp" android:textSize="15sp"
+            android:background="@drawable/circlebt" android:text="教师管理" android:textColor="@color/white"
+            android:layout_marginTop="40dp" android:layout_gravity="center" android:id="@+id/t_manage"/>
+    <Button android:layout_width="100dp" android:layout_height="100dp" android:textSize="15sp"
+            android:background="@drawable/circlebt" android:text="退出" android:textColor="@color/white"
+            android:layout_marginTop="40dp" android:layout_gravity="center" android:id="@+id/mmback"/>
+</LinearLayout>

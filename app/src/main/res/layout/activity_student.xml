@@ -16,8 +16,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:background="@color/white">
-
+            android:background="@color/whitesmoke">
 
         <RadioButton
                 android:id="@+id/student_cource"

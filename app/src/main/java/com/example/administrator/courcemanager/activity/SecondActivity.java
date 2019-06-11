@@ -29,6 +29,7 @@ public class SecondActivity extends Activity {
     private ArrayList<String> roleList;
     private ArrayAdapter<String> roleAdapter;
     String roleName;//角色
+    private static boolean mBackPress=false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,6 +91,11 @@ public class SecondActivity extends Activity {
                 if (OK == 0) {
                     RoleInfo roleInfo = new RoleInfo(userNumber, password, roleName);
                     MyPassWord.addData(getBaseContext(), roleInfo);
+                    if(roleName.equals("学生")){
+                        MyPassWord.addStudentID(getBaseContext(),userNumber,roleName);
+                    }else if(roleName.equals("教师")){
+                        MyPassWord.addTeacherID(getBaseContext(),userNumber,roleName);
+                    }
                     Toast.makeText(getApplicationContext(), "注册成功!", Toast.LENGTH_SHORT).show();
                     TimerTask task = new TimerTask() {
                         @Override

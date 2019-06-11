@@ -1,18 +1,25 @@
-package com.example.administrator.courcemanager.activity;
+package com.example.administrator.courcemanager.student;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 import com.example.administrator.courcemanager.R;
 import com.example.administrator.courcemanager.fragment.CourceFragment;
-import com.example.administrator.courcemanager.fragment.InfoFragment;
+import com.example.administrator.courcemanager.fragment.SInfoFragment;
 import com.example.administrator.courcemanager.fragment.MyFragmentPagerAdapter;
 import com.example.administrator.courcemanager.fragment.SPersonalFragment;
+import com.example.administrator.courcemanager.student.StudentEditActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 学生界面类
@@ -21,24 +28,33 @@ public class StudentActivity extends FragmentActivity {
     private ViewPager viewPager;//界面切换器
     private RadioGroup radioGroup;
     private List<Fragment> fragmentList=new ArrayList<>();
+    private static boolean mBackPress=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
 
+        SharedPreferences sharep = getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+        String sid=sharep.getString("userName","");
+
         viewPager=(ViewPager)findViewById(R.id.view_pager);
         radioGroup=(RadioGroup)findViewById(R.id.radio_group);
 
         CourceFragment courceFragment=new CourceFragment();
-        InfoFragment infoFragment=new InfoFragment();
+        SInfoFragment sInfoFragment =new SInfoFragment();
         SPersonalFragment spersonalFragment=new SPersonalFragment();
 
         fragmentList.add(courceFragment);
-        fragmentList.add(infoFragment);
+        fragmentList.add(sInfoFragment);
         fragmentList.add(spersonalFragment);
 
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
+
+        boolean result= StudentEditActivity.back();
+        if(result==true){
+            viewPager.setCurrentItem(2);
+        }
 
         // ViewPager页面切换监听器
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -89,5 +105,25 @@ public class StudentActivity extends FragmentActivity {
                 }
             }
         });
+    }
+    /**
+     * 双击退出程序,返回主菜单
+     */
+    @Override
+    public void onBackPressed() {
+        if(!mBackPress){
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            mBackPress = true;
+            viewPager.setCurrentItem(0);
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    mBackPress=false;
+                }
+            },2000);
+        }else{
+            this.finish();
+            System.exit(0);
+        }
     }
 }

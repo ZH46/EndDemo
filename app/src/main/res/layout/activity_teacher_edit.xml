@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:background="@color/whitesmoke"
+        android:layout_height="match_parent" android:orientation="vertical"
+        tools:context=".teacher.TeacherEditActivity">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="50dp"
+                  android:background="@color/khaki" android:gravity="center">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="编辑个人资料" android:textSize="24sp" android:textColor="@color/white"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                      android:background="@color/white" android:orientation="horizontal" >
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:layout_marginLeft="5dp" android:layout_gravity="center"
+                      android:textSize="15sp" android:text="姓名"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/tnameET"
+                      android:textSize="15sp" android:textColor="@color/black" android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/white"
+                      android:orientation="horizontal" android:layout_marginTop="1dp">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:layout_marginLeft="5dp" android:layout_gravity="center"
+                      android:textSize="15sp" android:text="授课课程"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/tcourseET"
+                      android:textSize="15sp" android:textColor="@color/black" android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/white"
+                      android:orientation="horizontal" android:layout_marginTop="1dp">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:layout_marginLeft="5dp" android:layout_gravity="center"
+                      android:textSize="15sp" android:text="专业"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/tprofessionalET"
+                      android:textSize="15sp" android:textColor="@color/black" android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/white"
+                      android:orientation="horizontal" android:layout_marginTop="1dp">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                      android:textColor="@color/black" android:layout_marginLeft="5dp" android:layout_gravity="center"
+                      android:textSize="15sp" android:text="联系电话"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/tphoneET"
+                      android:textSize="15sp" android:textColor="@color/black" android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                  android:orientation="horizontal" android:gravity="center">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/t_editbt_ok"
+                android:background="@color/coral" android:textColor="@color/white" android:textSize="20sp"
+                android:text="确定" android:layout_margin="5dp"/>
+    </LinearLayout>
+</LinearLayout>

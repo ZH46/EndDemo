@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:orientation="vertical"
+        android:layout_height="match_parent" android:background="@color/whitesmoke"
+        tools:context=".teacher.TeacherScoreActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:background="@color/khaki"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/Menu_main_textWeeks"
+                style="@style/TitleBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学生成绩管理"
+                android:textSize="24sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/white" android:layout_marginTop="10dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.5"
+                  android:layout_centerVertical="true" android:layout_marginLeft="5dp"
+                  android:text="学号" android:textSize="15sp"/>
+        <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                  android:textSize="15sp"
+                  android:layout_marginRight="5dp" android:id="@+id/stu_searchscore"
+                  android:layout_centerVertical="true"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"  android:layout_weight="0.5"
+                  android:layout_centerVertical="true" android:layout_marginLeft="5dp"
+                  android:text="成绩" android:textSize="15sp"/>
+        <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                  android:textSize="15sp"
+                  android:layout_marginRight="5dp" android:id="@+id/stu_scorestyle"
+                  android:layout_centerVertical="true"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/scorea" android:layout_weight="1"
+                android:textSize="15sp" android:background="@color/coral" android:textColor="@color/white"
+                android:text="添加" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@color/white" android:layout_marginTop="10dp" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                  android:text="学号" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                  android:text="成绩" android:textSize="20sp"/>
+    </LinearLayout>
+    <ListView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="5dp" android:id="@+id/lv_stuscore" android:background="@color/white">
+    </ListView>
+</LinearLayout>
